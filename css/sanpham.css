@@ -1,0 +1,243 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: "rbi";
+  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "ri";
+  src: url("../fonts/RobotoCondensed-Italic.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "rb";
+  src: url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "rli";
+  src: url("../fonts/RobotoCondensed-LightItalic.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "rl";
+  src: url("../fonts/RobotoCondensed-Light.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "rr";
+  src: url("../fonts/RobotoCondensed-Regular.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@keyframes transbanenr {
+  0% {
+    background: url(../img/banner1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 55%;
+  }
+  45% {
+    background: url(../img/banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 55%;
+  }
+  85% {
+    background: url(../img/banner3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 55%;
+  }
+}
+
+html {
+  --red-header-cl: #f73838;
+  --blue-main-cl: #0084ff;
+  --yellow-hover-cl: #dbc923;
+}
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+/*css san pham */
+.heading {
+  font-size: 50px;
+  font-family: rb;
+  line-height: normal;
+}
+.heading::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--blue-main-cl);
+  display: flex;
+  margin-top: 5px;
+}
+.product {
+  background: rgb(241, 241, 241);
+  padding: 10px;
+  padding-top: 0;
+}
+.product .container {
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 13px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 13px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 13px -7px rgba(0, 0, 0, 0.75);
+}

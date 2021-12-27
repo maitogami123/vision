@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css"/>
+    <link rel="stylesheet" href="./css/admin.css" />
+    <title>Vision</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="./index.html" style="padding: 5px"
+          ><img src="./img/logo.svg" alt=""
+        /></a>
+        <nav class="nav">
+          <a href="./index.html">Trang chủ</a>
+          <a href="./admin.html">Sản Phẩm</a>
+          <a href="./quanlydonhang.html">Đơn Hàng</a>
+          <a href="./quanlytaikhoan.html">Quản Lý Tài Khoản</a>
+        </nav>
+        <div class="accout" id="log-and-reg">
+          <a href="./login.html" class="login"
+            ><i class="ti-user"> </i>Đăng Nhập</a
+          >
+          <a href="./regis.html" class="regis"
+            ><i class="ti-pencil-alt"></i> Đăng Ký</a
+          >
+        </div>
+        <ul class="accout accout__login hide" id="user-section">
+                <li> <a href="" class="user-name"><i class="ti-user"></i></a>
+                    <ul class="accout__menu">
+                        <li>
+                            <a href="./quanlydonhangnguoidung.html"><i class="ti-shopping-cart-full"></i>Quản lý đơn hàng</a>
+                        </li>
+                        <li>
+                          <a href="./admin.html" class="to-admin hide"><i class="ti-settings"></i>Vào trang admin</a>
+                        </li>
+                        <li>
+                            <a href="" id="logout-btn">Thoát <i class="ti-arrow-right"></i></a>
+                        </li>
+                    </ul>
+                </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="admin__display">
+        <div class="container">
+          <div class="statistical">
+              <canvas id="myChart"></canvas>
+          </div>
+          <p class="text">Biểu đồ số lượng linh kiện được bán ra trong tháng.</p>
+        </div>
+      </section>
+      <section class="admin__product">
+        <div class="product">
+          <div class="product__header">
+            <h1 class="heading">Danh sách sản phẩm</h1>
+            <div class="input-search">
+              <input
+                type="text"
+                class="input"
+                placeholder="Nhập sản phẩm bạn muốn tìm kiếm"
+                id="search-input"
+              />
+              <a href="#" class="btn">Tìm Kiếm</a>
+            </div>
+          </div>
+          <div id="data-container"></div>
+          <div id="pagination" class="pagination"></div>
+        </div>
+        <div class="addproduct">
+          <h1 class="heading">Thêm sản phẩm</h1>
+          <form action="">
+            <table class="form__add">
+              <tr>
+                <td><label for="nameproduct">Tên sản phầm:</label></td>
+                <td>
+                  <input
+                    type="text"
+                    maxlength="max-content"
+                    id="nameproduct"
+                    name="nameproduct"
+                    value=""
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="typeproduct">Loại sản phẩm:</label></td>
+                <td>
+                  <select id="type-select" name="typeproduct">
+                    <option value="">--- Select Product Type ---</option>
+                    <option value="monitor">Màn hình</option>
+                    <option value="vga">Card đồ họa</option>
+                    <option value="cpu">Vi xử lý</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="pc">Máy bộ</option>
+                    <option value="gear">Linh kiện</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="priceproduct">Giá sản phẩm:</label></td>
+                <td>
+                  <input
+                    type="text"
+                    maxlength=""
+                    id="priceproduct"
+                    name="price"
+                    value=""
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="previewProduct">Review giá:</label></td>
+                <td>
+                  <p class="formated-price">0 đ</p>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="imgproduct">Ảnh sản phẩm:</label></td>
+                <td>
+                  <input
+                    type="file"
+                    id="imgproduct"
+                    name="imgproduct"
+                    value=""
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="info-product" class="info-lable">Thông tin:</label></td>
+                <td>
+                  <input id="info-product" name="info"></input>
+                </td>
+              </tr>
+            </table>
+            <button type="button" id="create" class="btnadd">Thêm sản phẩm</button>
+            <button type="button" id="save-change" class="btnadd">Lưu thay đổi</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__content-item support">
+            <span>Hỗ trợ khách hàng</span>
+            <a href="">Thẻ ưu đãi</a>
+            <a href="">Trung tâm bảo hành</a>
+            <a href="">Thanh toán và giao hàng</a>
+            <a href="">Dịch vụ sửa chữa và bảo trì</a>
+            <a href="">Doanh nghiệp thân thiết</a>
+          </div>
+          <div class="footer__content-item policy">
+            <span>Chính sách Mua hàng và Bảo hành</span>
+            <a href="">Quy định chung</a>
+            <a href="">Chính sách Bảo mật Thông tin</a>
+            <a href="">Chính sách Vận chuyển và Lắp đặt</a>
+            <a href="">Chính sách bảo hành</a>
+            <a href="">Chính sách đổi trả va hoàn tiền</a>
+            <a href="">Quy định giá cả và hình thức thanh toán</a>
+            <a href="">Chính sách trả góp</a>
+          </div>
+          <div class="footer__content-item social">
+            <span>Cộng đồng Vision</span>
+            <a href=""><i class="ti-facebook"></i> Facebook Vision</a>
+            <a href=""><i class="ti-youtube"></i> YouTube Vision</a>
+            <a href="tel:"><i class="ti-headphone"></i> Liên hệ mua hàng</a>
+          </div>
+          <div class="footer__content-item infor">
+            <span>Thông tin liên hệ</span>
+            <a href="">pham.kietred@gmail.com</a>
+            <a href="">pham.kietred@gmail.com</a>
+            <a href="">pham.kietred@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer__infor">
+          <div class="footer__infor-logo">
+            <a href="" class="logo"
+              ><img
+                src="./img/logo.svg"
+                style="max-width: 50px; max-height: 50px"
+                alt=""
+            /></a>
+            <h3 class="--h3">CÔNG TY CỔ PHẦN THƯƠNG MẠI - DỊCH VỤ VISION</h3>
+          </div>
+          <div class="footer__infor-address">
+            <div class="address-item">
+              <span>Địa chỉ trụ sở chính: </span><br/>
+              <a href="https://goo.gl/maps/WcASpsQL7adHyME26"
+                ><i class="ti-location-pin"></i> 273 An Dương Vương, Quận 5,
+                TP.HCM</a
+              >
+            </div>
+            <div class="address-item">
+              <span>Địa chỉ trụ sở 1: </span><br />
+              <a href=""
+                ><i class="ti-location-pin"></i> 105 Bà Huyện Thanh Quan, Quận
+                3, TP.HCM</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/productManage.js"></script>
+    <script src="./js/section.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const cartList = JSON.parse(localStorage.getItem('cartList'));
+      let productSold = [0, 0, 0, 0, 0, 0];
+      cartList.forEach(cart => {
+        cart.cartItems.forEach(item => {
+          switch(item.type) {
+            case 'monitor':
+              productSold[0] += item.quantity;
+              break;
+            case 'vga':
+              productSold[1] += item.quantity;
+              break;
+            case 'cpu':
+              productSold[2] += item.quantity;
+              break;
+            case 'laptop':
+              productSold[3] += item.quantity;
+              break;
+            case 'pc':
+              productSold[4] += item.quantity;
+              break;
+            case 'gear':
+              productSold[5] += item.quantity;
+              break;
+            default:
+              console.error('Invalid type: ' + item.type);
+              break;
+          }
+        })
+      })
+      const ctx = document.getElementById('myChart');
+      const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ['Màn hình', 'GPU', 'CPU', 'Laptop', 'CasePC', 'Linh kiện'],
+          datasets: [{
+              label: '# Số lượng bán ra',
+              data: productSold,
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true,
+                  ticks: {
+                    stepSize: 1
+                  }
+              }
+          }
+      }
+      });
+    </script>
+  </body>
+</html>

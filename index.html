@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <title>Visson</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__main">
+          <div class="header__main-logo">
+            <a href="./index.html" style="padding: 15px"
+              ><img
+                src="./img/logo.svg"
+                alt=""/></a>
+          </div>
+          <div class="header__main-search">
+            <div class="input-search">
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  class="input "
+                  id="search-input"
+                  placeholder="Nhập sản phẩm bạn muốn tìm kiếm"
+                />
+                <button class="btn" id="search-btn">Tìm Kiếm</button>
+              </div>
+              <ul id="search-box">
+              </ul>
+            </div>
+            <div class="interac">
+              <a href=""><span class="ti-headphone-alt"> </span>Liên Hệ</a>
+              <a href="./giohang.html">
+                <span class="ti-shopping-cart-full"> </span>Giỏ Hàng</a
+              >
+            </div>
+            <div class="accout" id="log-and-reg">
+              <a href="./login.html" class="login"
+                ><i class="ti-user"> </i>Đăng Nhập</a
+              >
+              <a href="./regis.html" class="regis"
+                ><i class="ti-pencil-alt"></i> Đăng Ký</a
+              >
+            </div>
+            <ul class="accout accout__login hide" id="user-section">
+                    <li> <a href="" class="user-name"><i class="ti-user"></i></a>
+                        <ul class="accout__menu">
+                            <li>
+                                <a href="./quanlydonhangnguoidung.html"><i class="ti-shopping-cart-full"></i>Quản lý đơn hàng</a>
+                            </li>
+                            <li>
+                              <a href="./admin.html" class="to-admin hide"><i class="ti-settings"></i>Vào trang admin</a>
+                            </li>
+                            <li>
+                                <a href="" id="logout-btn">Thoát <i class="ti-arrow-right"></i></a>
+                            </li>
+                        </ul>
+                    </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="nav">
+      <a href="#">Bảng Giá Sản Phẩm</a>
+      <a href="#">Trả Góp</a>
+      <a href="#">Kiểm Tra Bảo Hành</a>
+      <a href="./baohanh.html">Điều Khoản</a>
+      <a href="#">Liên Hệ</a>
+    </nav>
+    <main>
+      <div class="schero">
+        <!-- <img src="./img/banner2.jpg" alt="" /> -->
+        <div class="container">
+          <div class="schero__item">
+            <a href="" class="discout"
+              ><img src="./img/discout1.jpg" alt=""
+            /></a>
+            <a href="" class="discout"
+              ><img src="./img/discout2.jpg" alt=""
+            /></a>
+            <a href="" class="discout"
+              ><img src="./img/discout3.jpg" alt=""
+            /></a>
+            <a href="" class="discout"
+              ><img src="./img/discout4.jpg" alt=""
+            /></a>
+          </div>
+          <div class="schero__slibar">
+            <ul id="main__menu">
+              <li><a href=""><i class="ti-desktop"></i> Laptop</a>
+                      <ul class="sub__menu">
+                          <li><a href="">Laptop Gaming</a>
+                              <ul class="sub__menu">
+                                  <li><a href="">MSI</a></li>
+                                  <li><a href="">Asus</a></li>
+                                  <li><a href="">Acer</a></li>
+                                  <li><a href="">Gigabyte</a></li>
+                              </ul>
+
+                          </li>
+
+                          <li><a href="">Laptop văn phòng</a>
+                              <ul class="sub__menu">
+                                  <li><a href="">Dell</a></li>
+                                  <li><a href="">Lenovo</a></li>
+                                  <li><a href="">LG</a></li>
+                                  <li><a href="">HP</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="">Laptop theo kích thước</a>
+                              <ul class="sub__menu">
+                                  <li><a href="">Dưới 13 inch</a></li>
+                                  <li><a href="">13 đến 15 inch</a></li>
+                                  <li><a href="">Trên 15 inch</a></li>
+                              </ul>
+                          </li>
+                      </ul>
+              </li>
+              <li><a href=""><i class="ti-apple"></i> Apple</a>
+                      <ul class="sub__menu">
+                          <li><a href="">MacBook</a>
+                              <ul class="sub__menu">
+                                  <li><a href="">MacBook Pro</a></li>
+                                  <li><a href="">MacBook Air</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="">iMac</a>
+                              <ul class="sub__menu">
+                                  <li><a href="">iMac M1 24''</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="">Mac mini</a>
+                              <ul class="sub__menu">
+                                  <li><a href="">Mac mini M1</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="">Phụ kiện Apple</a>
+                              <ul class="sub__menu">
+                                  <li><a href="">Bàn phím, chuột</a></li>
+                                  <li>
+                                      <a href="">Thiết bị âm thanh</a></li>
+                              </ul>
+                          </li>
+                      </ul>
+              </li>
+              <li><a href=""><i class="ti-desktop"></i> Màn hình máy tính</a>
+
+                        <ul class="sub__menu">
+                            <li><a href="">Theo thương hiệu</a>
+                                <ul class="sub__menu">
+                                    <li><a href="">Acer</a></li>
+                                    <li><a href="">Asus</a></li>
+                                    <li><a href="">Dell</a></li>
+                                    <li><a href="">AOC</a></li>
+                                    <li><a href="">MSI</a></li>
+                                </ul>
+
+                            </li>
+                            <li><a href="">Theo giá</a>
+                                <ul class="sub__menu">
+                                    <li><a href="">Dưới 3 triệu</a></li>
+                                    <li><a href="">3 đến 5 triệu</a></li>
+                                    <li><a href="">5 đến 10 triệu</a></li>
+                                    <li><a href="">10 đến 15 triệu</a></li>
+                                    <li><a href="">15 đến 20 triệu</a></li>
+                                    <li><a href="">Trên 20 triệu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Theo nhu cầu</a>
+                                <ul class="sub__menu">
+                                    <li><a href="">Màn hình gaming</a></li>
+                                    <li><a href="">Màn hình thiết kế</a></li>
+                                    <li><a href="">Màn hình cong</a></li>
+                                    <li><a href="">Màn hình văn phòng</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Theo kích cỡ</a>
+                                <ul class="sub__menu">
+                                    <li><a href="">Dưới 19''</a></li>
+                                    <li><a href="">19 đến 21.5''</a></li>
+                                    <li><a href="">22'' đến 25''</a></li>
+                                    <li><a href="">27'' đến 29''</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+              </li>
+              <li><a href=""><i class="ti-layout-grid2-alt"></i> Linh kiện máy tính</a>
+                        <ul class="sub__menu">
+                            <li><a href="">CPU</a>
+                                <ul class="sub__menu">
+                                    <li><a href="">Intel</a></li>
+                                    <li><a href="">Ryzen</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">VGA</a>
+                                <ul class="sub__menu">
+                                    <li><a href="">NVDIA</a></li>
+                                    <li><a href="">AMD</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Mainboard</a>
+                                <ul class="sub__menu">
+                                    <li><a href="">Mainboard hỗ trợ Intel</a></li>
+                                    <li><a href="">Mainboard hỗ trợ AMD</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Ram</a>
+                                <ul class="sub__menu">
+                                    <li><a href="">Kingston</a></li>
+                                    <li><a href="">Kingmax</a></li>
+                                    <li><a href="">G.skill</a></li>
+                                    <li><a href="">Corsair</a></li>
+                                    <li><a href="">Gigabyte</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Ổ cứng</a>
+                                <ul class="sub__menu">
+                                    <li><a href="">Ổ cứng HDD</a></li>
+                                    <li><a href="">Ổ cứng SSD</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">PSU</a>
+                                <ul class="sub__menu">
+                                    <li><a href="">Corsair</a></li>
+                                    <li><a href="">Gigabyte</a></li>
+                                    <li><a href="">Asus/a></li>
+                                <li><a href="">MSI</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+              </li>
+              <li><a href=""><i class="ti-announcement"></i> Thiết bị âm thanh</a>
+                    <ul class="sub__menu">
+                        <li><a href="">Tai nghe</a>
+                            <ul class="sub__menu">
+                                <li><a href="">On-ear</a></li>
+                                <li><a href="">In-ear</a></li>
+                                <li><a href="">Tai nghe bluetooth</a></li>
+                                <li><a href="">Tai nghe gaming</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Loa nghe nhạc</a>
+                            <ul class="sub__menu">
+                                <li><a href="">Loa bluetooth</a></li>
+                                <li><a href="">Loa mini</a></li>
+                                <li><a href="">Loa soundbar</a></li>
+                                <li><a href="">Loa vi tính</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+              </li>
+              <li><a href=""><i class="ti-blackboard"></i> Thiết bị văn phòng</a>
+                    <ul class="sub__menu">
+                        <li><a href="">Máy in</a>
+                            <ul class="sub__menu">
+                                <li><a href="">Máy in laser</a></li>
+                                <li><a href="">Máy in kim</a></li>
+                                <li><a href="">Máy in phun</a></li>
+                                <li><a href="">Máy in đa năng</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="">Thiết bị trình chiếu</a>
+                            <ul class="sub__menu">
+                                <li><a href="">Thiết bị trình chiếu</a></li>
+                                <li><a href="">Màn chiếu</a></li>
+                                <li><a href="">Bút trình chiếu</a></li>
+                                <li><a href="">Giá treo máy</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class = "product-wrapper">
+        <div class="container">
+          <div class="product__header">
+            <h2 class="heading --h2">Màn hình máy tính</h2>
+            <div class="btn__list">
+              <button class="btnfilter" id="view-all-btn" onclick="viewAllProduct('monitor')">Xem tất cả sản phẩm</button>
+            </div>
+          </div>
+        </div>
+        <div id="data-container__monitor"></div>
+        <div id="pagination__monitor"></div>
+      </section>
+      <section class = "product-wrapper">
+        <div class="container">
+          <div class="product__header">
+            <h2 class="heading --h2">Case PC</h2>
+            <div class="btn__list">
+              <button class="btnfilter" id="view-all-btn"  onclick="viewAllProduct('pc')">Xem tất cả sản phẩm</button>
+            </div>
+          </div>
+        </div>
+        <div id="data-container__pc"></div>
+        <div id="pagination__pc"></div>
+      </section>
+      <section class = "product-wrapper">
+        <div class="container">
+          <div class="product__header">
+            <h2 class="heading --h2">Card đồ họa</h2>
+            <div class="btn__list">
+              <button class="btnfilter" id="view-all-btn"  onclick="viewAllProduct('vga')">Xem tất cả sản phẩm</button>
+            </div>
+          </div>
+        </div>
+        <div id="data-container__vga"></div>
+        <div id="pagination__vga"></div>
+      </section>
+      <section class = "product-wrapper">
+        <div class="container">
+          <div class="product__header">
+            <h2 class="heading --h2">Vi xử lý</h2>
+            <div class="btn__list">
+              <button class="btnfilter" id="view-all-btn"  onclick="viewAllProduct('cpu')">Xem tất cả sản phẩm</button>
+            </div>
+          </div>
+        </div>
+        <div id="data-container__cpu"></div>
+        <div id="pagination__cpu"></div>
+      </section>
+      <section class = "product-wrapper">
+        <div class="container">
+          <div class="product__header">
+            <h2 class="heading --h2">Linh kiện máy tính</h2>
+            <div class="btn__list">
+              <button class="btnfilter" id="view-all-btn"  onclick="viewAllProduct('gear')">Xem tất cả sản phẩm</button>
+            </div>
+          </div>
+        </div>
+        <div id="data-container__gear"></div>
+        <div id="pagination__gear"></div>
+      </section>
+    </main>
+    <div class="contact">
+      <a href="tel:"><img src="./img/icon-phone-s2.svg" alt=""></a>
+      <a href=""><img src="./img/icon-mail-s2.svg" alt=""></a>
+      <a href=""><img src="./img/icon-map-s2.svg" alt=""></i></a>
+      <a href=""><img src="./img/icon-fanpage-s2.svg" alt=""></i></a>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__content-item support">
+            <span>Hỗ trợ khách hàng</span>
+            <a href="">Thẻ ưu đãi</a>
+            <a href="">Trung tâm bảo hành</a>
+            <a href="">Thanh toán và giao hàng</a>
+            <a href="">Dịch vụ sửa chữa và bảo trì</a>
+            <a href="">Doanh nghiệp thân thiết</a>
+          </div>
+          <div class="footer__content-item policy">
+            <span>Chính sách Mua hàng và Bảo hành</span>
+            <a href="">Quy định chung</a>
+            <a href="">Chính sách Bảo mật Thông tin</a>
+            <a href="">Chính sách Vận chuyển và Lắp đặt</a>
+            <a href="">Chính sách bảo hành</a>
+            <a href="">Chính sách đổi trả va hoàn tiền</a>
+            <a href="">Quy định giá cả và hình thức thanh toán</a>
+            <a href="">Chính sách trả góp</a>
+          </div>
+          <div class="footer__content-item social">
+            <span>Cộng đồng Vision</span>
+            <a href=""><i class="ti-facebook"></i> Facebook Vision</a>
+            <a href=""><i class="ti-youtube"></i> YouTube Vision</a>
+            <a href="tel:"><i class="ti-headphone"></i> Liên hệ mua hàng</a>
+          </div>
+          <div class="footer__content-item infor">
+            <span>Thông tin liên hệ</span>
+            <a href="">pham.kietred@gmail.com</a>
+            <a href="">pham.kietred@gmail.com</a>
+            <a href="">pham.kietred@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer__infor">
+          <div class="footer__infor-logo">
+            <a href="" class="logo"
+              ><img
+                src="./img/bmw_logo_preview.jpg"
+                style="max-width: 50px; max-height: 50px"
+                alt=""
+            /></a>
+            <h3 class="--h3">CÔNG TY CỔ PHẦN THƯƠNG MẠI - DỊCH VỤ VISION</h3>
+          </div>
+          <div class="footer__infor-address">
+            <div class="address-item">
+              <span>Địa chỉ trụ sở chính: </span><br />
+              <a href="https://goo.gl/maps/WcASpsQL7adHyME26"
+                ><i class="ti-location-pin"></i> 273 An Dương Vương, Quận 5, TP.HCM</a
+              >
+            </div>
+            <div class="address-item">
+              <span>Địa chỉ trụ sở 1: </span><br />
+              <a href=""><i class="ti-location-pin"></i> 105 Bà Huyện Thanh Quan, Quận 3, TP.HCM</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/search.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/section.js"></script>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/renderProduct.js"></script>
+  </body>
+</html>

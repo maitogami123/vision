@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+
+    <title>Vision</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="./index.html" style="padding: 1px"
+          ><img src="./img/logo.svg" alt=""
+        /></a>
+        <nav class="nav">
+          <a href="./index.html">Trang chủ</a>
+          <a href="./admin.html">Sản Phẩm</a>
+          <a href="./quanlydonhang.html">Đơn Hàng</a>
+          <a href="./quanlytaikhoan.html">Quản Lý Tài Khoản</a>
+        </nav>
+        <div class="accout" id="log-and-reg">
+          <a href="./login.html" class="login"
+            ><i class="ti-user"> </i>Đăng Nhập</a
+          >
+          <a href="./regis.html" class="regis"
+            ><i class="ti-pencil-alt"></i> Đăng Ký</a
+          >
+        </div>
+        <ul class="accout accout__login hide" id="user-section">
+                <li> <a href="" class="user-name"><i class="ti-user"></i></a>
+                    <ul class="accout__menu">
+                        <li>
+                            <a href="./quanlydonhangnguoidung.html"><i class="ti-shopping-cart-full"></i>Quản lý đơn hàng</a>
+                        </li>
+                        <li>
+                          <a href="./admin.html" class="to-admin hide"><i class="ti-settings"></i>Vào trang admin</a>
+                        </li>
+                        <li>
+                            <a href="" id="logout-btn">Thoát <i class="ti-arrow-right"></i></a>
+                        </li>
+                    </ul>
+                </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="admin__accout">
+        <div class="container">
+          <div class="accout__header">
+            <h1 class="heading">Danh sách khách hàng</h1>
+            <button id="add-user" class="add-user">Thêm User</button>
+          </div>
+          <table class="table__accout">
+            <tr>
+              <td>Tên đăng nhập</td>
+              <td>Tên khách hàng</td>
+              <td>Vai trò</td>
+              <td>SĐT</td>
+              <td>Hành động</td>
+            </tr>
+          </table>
+          <ul class="account-wrapper">
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__content-item support">
+            <span>Hỗ trợ khách hàng</span>
+            <a href="">Thẻ ưu đãi</a>
+            <a href="">Trung tâm bảo hành</a>
+            <a href="">Thanh toán và giao hàng</a>
+            <a href="">Dịch vụ sửa chữa và bảo trì</a>
+            <a href="">Doanh nghiệp thân thiết</a>
+          </div>
+          <div class="footer__content-item policy">
+            <span>Chính sách Mua hàng và Bảo hành</span>
+            <a href="">Quy định chung</a>
+            <a href="">Chính sách Bảo mật Thông tin</a>
+            <a href="">Chính sách Vận chuyển và Lắp đặt</a>
+            <a href="">Chính sách bảo hành</a>
+            <a href="">Chính sách đổi trả va hoàn tiền</a>
+            <a href="">Quy định giá cả và hình thức thanh toán</a>
+            <a href="">Chính sách trả góp</a>
+          </div>
+          <div class="footer__content-item social">
+            <span>Cộng đồng Vision</span>
+            <a href=""><i class="ti-facebook"></i> Facebook Vision</a>
+            <a href=""><i class="ti-youtube"></i> YouTube Vision</a>
+            <a href="tel:"><i class="ti-headphone"></i> Liên hệ mua hàng</a>
+          </div>
+          <div class="footer__content-item infor">
+            <span>Thông tin liên hệ</span>
+            <a href="">pham.kietred@gmail.com</a>
+            <a href="">pham.kietred@gmail.com</a>
+            <a href="">pham.kietred@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer__infor">
+          <div class="footer__infor-logo">
+            <a href="" class="logo"
+              ><img
+                src="./img/logo.svg"
+                style="max-width: 50px; max-height: 50px"
+                alt=""
+            /></a>
+            <h3 class="--h3">CÔNG TY CỔ PHẦN THƯƠNG MẠI - DỊCH VỤ VISION</h3>
+          </div>
+          <div class="footer__infor-address">
+            <div class="address-item">
+              <span>Địa chỉ trụ sở chính: </span><br />
+              <a href="https://goo.gl/maps/WcASpsQL7adHyME26"
+                ><i class="ti-location-pin"></i> 273 An Dương Vương, Quận 5,
+                TP.HCM</a
+              >
+            </div>
+            <div class="address-item">
+              <span>Địa chỉ trụ sở 1: </span><br />
+              <a href=""
+                ><i class="ti-location-pin"></i> 105 Bà Huyện Thanh Quan, Quận
+                3, TP.HCM</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="account-overlay hide" id="jsModal">
+      <div class="account-container" id="account-container">
+        <button class="close-modal" id="close-modal">x</button>
+        <form action="" method="">
+            <h2 class="heading --h2 title__login">Đăng Ký</h2>
+            <div class="message" style="margin-bottom: 12px;"></div>
+            <table class="form__login">
+              <tr>
+                <td><label for="fullname">Họ Và Tên: </label></td>
+                <td>
+                  <input
+                    class="fullname"
+                    type="text"
+                    name="fullname"
+                    placeholder="Nhập họ và tên của bạn"
+                    value=""
+                    id="fullname"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="email">Gmail: </label></td>
+                <td>
+                  <input
+                    class="email"
+                    type="email"
+                    placeholder="Nhập vào Gmail của bạn"
+                    value=""
+                    id="email"
+                    name="email"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="phonenumber">Số điện thoại: </label></td>
+                <td>
+                  <input
+                    class="phone-number"
+                    type="text"
+                    placeholder="Nhập số điện thoại của bạn"
+                    name="phonenumber"
+                    id="phonenumber"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="accout__regis">Tên đăng nhập: </label></td>
+                <td>
+                  <input
+                    class="username"
+                    type="text"
+                    placeholder="Nhập tên đăng nhập"
+                    id="accout__regis"
+                    name="accout__regis"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="password">Mật Khẩu: </label></td>
+                <td>
+                  <input
+                    class="password"
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Nhập mật khẩu của bạn"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="password1">Nhập Lại Mật Khẩu: </label></td>
+                <td>
+                  <input
+                    class="re-enter-password"
+                    type="password"
+                    id="password1"
+                    name="password1"
+                    placeholder="Nhập lại mật khẩu của bạn"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="role">Chọn vai trò: </label></td>
+                <td>
+                  <select name="role" id="role">
+                    <option value="">--- Chọn vai trò ---</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+            <button type="button" class="btn admin-register-btn">Đăng Ký</button>
+          </form>
+      </div>
+    </div>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/register.js"></script>
+    <script src="./js/section.js"></script>
+    <script src="./js/userList.js"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="./css/baohanh.css">
+    <link rel="stylesheet" href="./css/thanhtoasn.css">
+    
+
+    <title>Vission</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <a href="./index.html" style="padding: 15px;border-radius: 10px; background: #fff;"
+            ><img
+              src="./img/logo.svg"
+              alt=""/></a>
+        </div>
+        <nav class="header__nav">
+          <a href="./index.html"><i class="ti-home"></i> Trang Chủ</a>
+          <a href=""><i class="ti-shopping-cart-full"></i> Giỏ hàng</a>
+          <a href=""><i class="ti-bell"></i> Thông Báo</a>
+          <a href=""><i class="ti-headphone-alt"></i> Liên Hệ</a>
+        </nav>
+        <div class="accout" id="log-and-reg">
+          <a href="./login.html" class="login"
+            ><i class="ti-user"> </i>Đăng Nhập</a
+          >
+          <a href="./regis.html" class="regis"
+            ><i class="ti-pencil-alt"></i> Đăng Ký</a
+          >
+        </div>
+        <ul class="accout accout__login hide" id="user-section">
+                <li> <a href="" class="user-name"><i class="ti-user"></i></a>
+                    <ul class="accout__menu">
+                        <li>
+                            <a href="./quanlydonhangnguoidung.html"><i class="ti-shopping-cart-full"></i>Quản lý đơn hàng</a>
+                        </li>
+                        <li>
+                          <a href="./admin.html" class="to-admin hide"><i class="ti-settings"></i>Vào trang admin</a>
+                        </li>
+                        <li>
+                            <a href="" id="logout-btn">Thoát <i class="ti-arrow-right"></i></a>
+                        </li>
+                    </ul>
+                </li>
+        </ul>
+    </header>
+    
+    <main>
+      <section class="pay">
+        <h1 class="heading --h1">Thanh Toán</h1>
+        <div class="container">
+          <form action="" method="">
+            <fieldset>
+              <legend class="title">Thông tin giao hàng</legend>
+              <p id="message"></p>
+              <label for="address">Địa chỉ:</label>
+              <input type="text" name="address" id="address" size="30" value="" maxlength="200" placeholder="Nhập địa chỉ của bạn"><br>
+            </fieldset>
+            <fieldset>
+              <legend class="title">Phương thức thanh toán</legend>
+              <div class="payment-methods">
+                <div class="payment-method">
+                  <input type="radio" value="online-banking" id="online-banking" name="payment-method">
+                  <label class="payment-radio__label" for="online-banking">Thanh toán bằng chuyển khoản</label>
+                </div>
+                <div class="payment-method">
+                  <input type="radio" value="momo" id="momo-banking" name="payment-method" >
+                  <label class="payment-radio__label" for="momo-banking">Thanh toán bằng Ví Momo</label>
+                </div>
+                <div class="payment-method">
+                  <input type="radio" value="cod" id="cod" name="payment-method" >
+                  <label class="payment-radio__label" for="cod">Thanh toán khi nhận hàng</label>
+                </div>
+              </div>
+            </fieldset>
+            <p class="text">Nhấn nút xác nhận bạn sẽ đồng ý với <a href="#">điều khoản và chính sách</a> của chúng tôi</p>
+            <button type="button" onclick="handleCheckOut()" class="btnpay">Xác Nhận</button>
+          </form>
+        </div>
+      </section>
+    </main>
+   
+    <!-- contact -->
+       <div class="contact">
+      <a href="tel:"><img src="./img/icon-phone-s2.svg" alt=""></a>
+      <a href=""><img src="./img/icon-mail-s2.svg" alt=""></a>
+      <a href=""><img src="./img/icon-map-s2.svg" alt=""></i></a>
+      <a href=""><img src="./img/icon-fanpage-s2.svg" alt=""></i></a>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__content-item support">
+            <span>Hỗ trợ khách hàng</span>
+            <a href="">Thẻ ưu đãi</a>
+            <a href="">Trung tâm bảo hành</a>
+            <a href="">Thanh toán và giao hàng</a>
+            <a href="">Dịch vụ sửa chữa và bảo trì</a>
+            <a href="">Doanh nghiệp thân thiết</a>
+          </div>
+          <div class="footer__content-item policy">
+            <span>Chính sách Mua hàng và Bảo hành</span>
+            <a href="">Quy định chung</a>
+            <a href="">Chính sách Bảo mật Thông tin</a>
+            <a href="">Chính sách Vận chuyển và Lắp đặt</a>
+            <a href="">Chính sách bảo hành</a>
+            <a href="">Chính sách đổi trả va hoàn tiền</a>
+            <a href="">Quy định giá cả và hình thức thanh toán</a>
+            <a href="">Chính sách trả góp</a>
+          </div>
+          <div class="footer__content-item social">
+            <span>Cộng đồng Vision</span>
+            <a href=""><i class="ti-facebook"></i> Facebook Vision</a>
+            <a href=""><i class="ti-youtube"></i> YouTube Vision</a>
+            <a href="tel:"><i class="ti-headphone"></i> Liên hệ mua hàng</a>
+          </div>
+          <div class="footer__content-item infor">
+            <span>Thông tin liên hệ</span>
+            <a href="">pham.kietred@gmail.com</a>
+            <a href="">pham.kietred@gmail.com</a>
+            <a href="">pham.kietred@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer__infor">
+          <div class="footer__infor-logo">
+            <a href="" class="logo"
+              ><img
+                src="./img/bmw_logo_preview.jpg"
+                style="max-width: 50px; max-height: 50px"
+                alt=""
+            /></a>
+            <h3 class="--h3">CÔNG TY CỔ PHẦN THƯƠNG MẠI - DỊCH VỤ VISION</h3>
+          </div>
+          <div class="footer__infor-address">
+            <div class="address-item">
+              <span>Địa chỉ trụ sở chính: </span><br />
+              <a href="https://goo.gl/maps/WcASpsQL7adHyME26"
+                >273 An Dương Vương, Quận 5, TP.HCM</a
+              >
+            </div>
+            <div class="address-item">
+              <span>Địa chỉ trụ sở 1: </span><br />
+              <a href="">105 Bà Huyện Thanh Quan, Quận 3, TP.HCM</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/section.js"></script>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/cartList.js"></script>
+  </body>
+</html>
