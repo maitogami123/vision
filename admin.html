@@ -11,13 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"
-    ></script>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="./themify-icons/themify-icons.css" />
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css"/>
     <link rel="stylesheet" href="./css/admin.css" />
@@ -31,7 +26,7 @@
         /></a>
         <nav class="nav">
           <a href="./index.html">Trang chủ</a>
-          <a href="./admin.html">Sản Phẩm</a>
+          <a href="#">Sản Phẩm</a>
           <a href="./quanlydonhang.html">Đơn Hàng</a>
           <a href="./quanlytaikhoan.html">Quản Lý Tài Khoản</a>
         </nav>
@@ -53,7 +48,7 @@
                           <a href="./admin.html" class="to-admin hide"><i class="ti-settings"></i>Vào trang admin</a>
                         </li>
                         <li>
-                            <a href="" id="logout-btn">Thoát <i class="ti-arrow-right"></i></a>
+                            <a href="#" id="logout-btn">Thoát <i class="ti-arrow-right"></i></a>
                         </li>
                     </ul>
                 </li>
@@ -188,7 +183,7 @@
           <div class="footer__content-item infor">
             <span>Thông tin liên hệ</span>
             <a href="">pham.kietred@gmail.com</a>
-            <a href="">pham.kietred@gmail.com</a>
+            <a href="">lethaivi0610@gmail.com</a>
             <a href="">pham.kietred@gmail.com</a>
           </div>
         </div>
@@ -197,7 +192,7 @@
             <a href="" class="logo"
               ><img
                 src="./img/logo.svg"
-                style="max-width: 50px; max-height: 50px"
+                style="width: 100px; height: 80px"
                 alt=""
             /></a>
             <h3 class="--h3">CÔNG TY CỔ PHẦN THƯƠNG MẠI - DỊCH VỤ VISION</h3>
@@ -228,33 +223,35 @@
     <script>
       const cartList = JSON.parse(localStorage.getItem('cartList'));
       let productSold = [0, 0, 0, 0, 0, 0];
-      cartList.forEach(cart => {
-        cart.cartItems.forEach(item => {
-          switch(item.type) {
-            case 'monitor':
-              productSold[0] += item.quantity;
-              break;
-            case 'vga':
-              productSold[1] += item.quantity;
-              break;
-            case 'cpu':
-              productSold[2] += item.quantity;
-              break;
-            case 'laptop':
-              productSold[3] += item.quantity;
-              break;
-            case 'pc':
-              productSold[4] += item.quantity;
-              break;
-            case 'gear':
-              productSold[5] += item.quantity;
-              break;
-            default:
-              console.error('Invalid type: ' + item.type);
-              break;
-          }
+      if (cartList) {
+        cartList.forEach(cart => {
+          cart.cartItems.forEach(item => {
+            switch(item.type) {
+              case 'monitor':
+                productSold[0] += item.quantity;
+                break;
+              case 'vga':
+                productSold[1] += item.quantity;
+                break;
+              case 'cpu':
+                productSold[2] += item.quantity;
+                break;
+              case 'laptop':
+                productSold[3] += item.quantity;
+                break;
+              case 'pc':
+                productSold[4] += item.quantity;
+                break;
+              case 'gear':
+                productSold[5] += item.quantity;
+                break;
+              default:
+                console.error('Invalid type: ' + item.type);
+                break;
+            }
+          })
         })
-      })
+      }
       const ctx = document.getElementById('myChart');
       const myChart = new Chart(ctx, {
       type: 'bar',

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,7 +14,7 @@
     <link rel="stylesheet" href="./themify-icons/themify-icons.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/giohang.css">
-    <title>Visson</title>
+    <title>Vision</title>
   </head>
   <body>
     <header class="header">
@@ -32,13 +33,15 @@
               <input
                 type="text"
                 class="input"
+                id="search-input"
                 placeholder="Nhập sản phẩm bạn muốn tìm kiếm"
               />
-              <a href="" class="btn">Tìm Kiếm</a>
+              <a href="" class="btn" id="search-btn">Tìm Kiếm</a>
+              <ul id="search-box">
+              </ul>
             </div>
             <div class="interac">
-              <a href=""><span class="ti-headphone-alt"> </span>Liên Hệ</a>
-              <a href="">
+              <a href="./giohang.html">
                 <span class="ti-shopping-cart-full"> </span>Giỏ Hàng</a
               >
             </div>
@@ -60,7 +63,7 @@
                               <a href="./admin.html" class="to-admin hide"><i class="ti-settings"></i>Vào trang admin</a>
                             </li>
                             <li>
-                                <a href="" id="logout-btn">Thoát <i class="ti-arrow-right"></i></a>
+                                <a href="#" id="logout-btn">Thoát <i class="ti-arrow-right"></i></a>
                             </li>
                         </ul>
                     </li>
@@ -71,10 +74,10 @@
     </header>
     <nav class="nav">
       <a href="#">Bảng Giá Sản Phẩm</a>
-      <a href="#">Trả Góp</a>
+      <a href="./chinhachthanhtoan.html">Trả Góp</a>
       <a href="#">Kiểm Tra Bảo Hành</a>
       <a href="./baohanh.html">Điều Khoản</a>
-      <a href="#">Liên Hệ</a>
+      <a href="#footer">Liên Hệ</a>
     </nav>
    
     <main>
@@ -115,52 +118,52 @@
     </main>
     <div class="contact">
       <a href="tel:"><img src="./img/icon-phone-s2.svg" alt=""></a>
-      <a href=""><img src="./img/icon-mail-s2.svg" alt=""></a>
-      <a href=""><img src="./img/icon-map-s2.svg" alt=""></i></a>
-      <a href=""><img src="./img/icon-fanpage-s2.svg" alt=""></i></a>
+      <a href="#"><img src="./img/icon-mail-s2.svg" alt=""></a>
+      <a href="#"><img src="./img/icon-map-s2.svg" alt=""></i></a>
+      <a href="#"><img src="./img/icon-fanpage-s2.svg" alt=""></i></a>
     </div>
 
     <!-- footer -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="container">
         <div class="footer__content">
           <div class="footer__content-item support">
             <span>Hỗ trợ khách hàng</span>
-            <a href="">Thẻ ưu đãi</a>
-            <a href="">Trung tâm bảo hành</a>
-            <a href="">Thanh toán và giao hàng</a>
-            <a href="">Dịch vụ sửa chữa và bảo trì</a>
-            <a href="">Doanh nghiệp thân thiết</a>
+            <a href="#">Thẻ ưu đãi</a>
+            <a href="#">Trung tâm bảo hành</a>
+            <a href="#">Thanh toán và giao hàng</a>
+            <a href="#">Dịch vụ sửa chữa và bảo trì</a>
+            <a href="#">Doanh nghiệp thân thiết</a>
           </div>
           <div class="footer__content-item policy">
             <span>Chính sách Mua hàng và Bảo hành</span>
-            <a href="">Quy định chung</a>
-            <a href="">Chính sách Bảo mật Thông tin</a>
-            <a href="">Chính sách Vận chuyển và Lắp đặt</a>
-            <a href="">Chính sách bảo hành</a>
-            <a href="">Chính sách đổi trả va hoàn tiền</a>
-            <a href="">Quy định giá cả và hình thức thanh toán</a>
-            <a href="">Chính sách trả góp</a>
+            <a href="#">Quy định chung</a>
+            <a href="#">Chính sách Bảo mật Thông tin</a>
+            <a href="#">Chính sách Vận chuyển và Lắp đặt</a>
+            <a href="#">Chính sách bảo hành</a>
+            <a href="#">Chính sách đổi trả va hoàn tiền</a>
+            <a href="#">Quy định giá cả và hình thức thanh toán</a>
+            <a href="#">Chính sách trả góp</a>
           </div>
           <div class="footer__content-item social">
             <span>Cộng đồng Vision</span>
-            <a href=""><i class="ti-facebook"></i> Facebook Vision</a>
-            <a href=""><i class="ti-youtube"></i> YouTube Vision</a>
+            <a href="#"><i class="ti-facebook"></i> Facebook Vision</a>
+            <a href="#"><i class="ti-youtube"></i> YouTube Vision</a>
             <a href="tel:"><i class="ti-headphone"></i> Liên hệ mua hàng</a>
           </div>
           <div class="footer__content-item infor">
             <span>Thông tin liên hệ</span>
-            <a href="">pham.kietred@gmail.com</a>
-            <a href="">pham.kietred@gmail.com</a>
-            <a href="">pham.kietred@gmail.com</a>
+            <a href="#">pham.kietred@gmail.com</a>
+            <a href="#">shikigamimaito25@gmail.com</a>
+            <a href="#">duy.vandang@gmail.com</a>
           </div>
         </div>
         <div class="footer__infor">
           <div class="footer__infor-logo">
-            <a href="" class="logo"
+            <a href="#" class="logo"
               ><img
-                src="./img/bmw_logo_preview.jpg"
-                style="max-width: 50px; max-height: 50px"
+                src="./img/logo.svg"
+                style="width: 100px; height: 80px"
                 alt=""
             /></a>
             <h3 class="--h3">CÔNG TY CỔ PHẦN THƯƠNG MẠI - DỊCH VỤ VISION</h3>
@@ -174,7 +177,7 @@
             </div>
             <div class="address-item">
               <span>Địa chỉ trụ sở 1: </span><br />
-              <a href=""><i class="ti-location-pin"></i> 105 Bà Huyện Thanh Quan, Quận 3, TP.HCM</a>
+              <a href="#"><i class="ti-location-pin"></i> 105 Bà Huyện Thanh Quan, Quận 3, TP.HCM</a>
             </div>
           </div>
         </div>
@@ -183,5 +186,6 @@
     <script src="./js/section.js"></script>
     <script src="./js/utilities.js"></script>
     <script src="./js/cart.js"></script>
+    <script src="./js/search.js"></script>
   </body>
 </html>

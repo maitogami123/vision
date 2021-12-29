@@ -401,3 +401,12 @@ body {
     justify-content: space-evenly;
   }
 }
+
+.forgot-password {
+  font-family: rr;
+  text-decoration: none;
+}
+
+.forgot-password:visited {
+  color: #0084ff;
+}

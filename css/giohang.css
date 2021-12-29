@@ -419,3 +419,11 @@ body {
   max-width: 20px;
   margin: 0 4px;
 }
+
+.admin.hide, .user.hide {
+  display: none;
+}
+
+.btnpay.hide {
+  display: none;
+}

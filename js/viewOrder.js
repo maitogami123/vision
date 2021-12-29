@@ -12,7 +12,9 @@ function renderCart(order) {
     if (user.role == "admin") {
         document.getElementById('empty-cart').classList.add('hide');
         document.getElementById('cart__payment').classList.remove('hide');
-        document.querySelector('.btndelete').classList.remove('hide');
+        if (document.querySelector('.btndelete').classList.contains('hide')) {
+            document.querySelector('.btndelete').classList.remove('hide');
+        }
         let htmls = order.cartItems.map((item, index) => {
             return `
                 <div class="product__list-item">
@@ -37,7 +39,9 @@ function renderCart(order) {
     } else {
         document.getElementById('empty-cart').classList.add('hide');
         document.getElementById('cart__payment').classList.remove('hide');
-        console.log(order);
+        if (!document.querySelector('.btndelete').classList.contains('hide')) {
+            document.querySelector('.btndelete').classList.add('hide');
+        }
         let htmls = order.cartItems.map((item, index) => {
             return `
                 <div class="product__list-item">

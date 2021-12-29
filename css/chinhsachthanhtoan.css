@@ -482,3 +482,8 @@ body {
         display: block;
     }
 }
+
+.accout.hide {
+  display: none;
+}
+
