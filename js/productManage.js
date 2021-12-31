@@ -13,14 +13,14 @@ function renderProduct(products) {
             ],
             pageSize: 10,
             callback: function (data, pagination) {
-                var dataHtml = '<ul id="list-product"  class="product__list">';
+                var dataHtml = '<ul id="list-product" class="product__list">';
                 $.each(data, function (index, product) {
                     dataHtml += `
                     <li class="product__item">
                     <p><span class="item__type">${product.id}</span></p>
                     <img class="item__img" src="${product.img}" alt="" />
                     <div class="item__infor">
-                        <a href="./sanpham.html" class="item__name">
+                        <a href="#" onClick="viewProduct('${product.id}')" class="item__name">
                             ${product.name}
                         </a>
                         <p>Giá: <span class="price">${formatPrice(product.price)}</span></p>
@@ -139,3 +139,11 @@ searchInput.addEventListener('keyup', (e) => {
         renderProduct(getProduct());
     }
 })
+
+function viewProduct(id) {
+    if (localStorage.getItem('productId')) {
+      localStorage.removeItem('productId');
+    }
+    localStorage.setItem('productId', id);
+    window.location.replace('./chitietsanpham.html');
+  }

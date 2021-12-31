@@ -3,6 +3,5 @@ function viewProduct(id) {
     localStorage.removeItem('productId');
   }
   localStorage.setItem('productId', id);
-  console.log(id);
   window.location.replace('./chitietsanpham.html');
 }
