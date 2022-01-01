@@ -485,3 +485,18 @@ body {
     justify-content: space-evenly;
   }
 }
+
+.img-item {
+  width: 250px;
+  height: 250px;
+}
+
+.text-container {
+  font-family: rr;
+  line-height:1.4;
+  font-size: 20px;
+}
+
+.brand-name {
+  color: var(--blue-main-cl);
+}
