@@ -18,7 +18,7 @@ function renderProduct(products) {
                     dataHtml += `
                     <li class="product__item">
                     <p><span class="item__type">${product.id}</span></p>
-                    <img class="item__img" src="${product.img}" alt="" />
+                    <img class="item__img" src="${(product.img)}" alt="" />
                     <div class="item__infor">
                         <a href="#" onClick="viewProduct('${product.id}')" class="item__name">
                             ${product.name}
@@ -50,7 +50,7 @@ function handleAddProduct() {
     let newProductInfo = document.querySelector('input[name="info"]');
     let newProductType = document.querySelector('#type-select');
     let newProductImg = document.querySelector('#imgproduct');
-    newProductImg = "./img/" + newProductImg.value.substring(newProductImg.value.lastIndexOf('\\') + 1);
+    newProductImg = "./img/img-not-available.png" ;
     if (newProductType.value) {
         let newProduct = {
             id: generateUniqueId().toString(),
@@ -109,7 +109,8 @@ function handleEditProduct(id) {
         productList[index].description =  productInfo.value;
         productList[index].type = productType.value;
         if (productImg.value) {
-            productList[index].img = "./img/" + productImg.value.substring(productImg.value.lastIndexOf('\\') + 1);
+            productList[index].img = "./img/img-not-available.png";
+            // productList[index].img = "./img/" + productImg.value.substring(productImg.value.lastIndexOf('\\') + 1);
         }
         localStorage.setItem("products", JSON.stringify(productList));
         renderProduct(productList);
