@@ -519,3 +519,10 @@ window.onload = () => {
       generateUser();
    }
 }
+
+// ============================= Error Handling =================================
+
+const displayErrorMsg = (msg, selectElement) => {
+   document.querySelector(selectElement).innerHTML = msg
+}
+

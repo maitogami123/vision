@@ -44,14 +44,74 @@ document.querySelector('input[name="price"]').addEventListener('keyup', (e) => {
     priceBox.innerHTML = formatPrice(e.target.value);
 })
 
+const validateName = (nameToValidate) => {
+    if (nameToValidate.trim().length <= 0 ) {
+        displayErrorMsg('Vui lòng nhập tên sản phẩm', '.addproduct__error')
+        return false;
+    }
+    displayErrorMsg('', '.addproduct__error')
+    return true;
+}
+
+const validatePrice = (priceToValidate) => {
+    if (isNaN(priceToValidate)) {
+        displayErrorMsg('Giá phải là số', '.addproduct__error')
+        return false;
+    }
+    if (!priceToValidate || priceToValidate < 0) {
+        displayErrorMsg('Giá sản phẩm phải lớn hơn 0', '.addproduct__error')
+        return false;
+    } else {
+        displayErrorMsg('', '.addproduct__error')
+        return true;
+    }
+}
+
+const validateType = (typeToValidate) => {
+    if (!typeToValidate) {
+        displayErrorMsg('Vui lòng chọn loại sản phẩm', '.addproduct__error')
+        return false;
+    }
+    displayErrorMsg('', '.addproduct__error')
+    return true;
+}
+
+const validateImg = (imgToValidate) => {
+    console.log(imgToValidate.files[0])
+    if (imgToValidate.files.length <= 0) {
+        displayErrorMsg('Vui lòng chọn ảnh sản phẩm', '.addproduct__error')
+        return false;
+    }
+    if (imgToValidate.files[0].name.includes('.png') || imgToValidate.files[0].name.includes('.jpg')) {
+        displayErrorMsg('', '.addproduct__error')
+        return true;
+    }
+    else {
+        displayErrorMsg(`Định dạng ảnh không được hỗ trợ!
+        Vui lòng chọn ảnh có định dạng png hoặc jpg`, '.addproduct__error')
+        return false;
+    }
+}
+
+const validateInfo = (infoToValidate) => {
+    if (infoToValidate.trim() <= 0) {
+        displayErrorMsg('Vui lòng nhập thông tin sản phẩm', '.addproduct__error')
+        return false;
+    }
+    displayErrorMsg('', '.addproduct__error')
+    return true;
+}
+
 function handleAddProduct() {
     let newProductName = document.querySelector('input[name="nameproduct"]');
     let newProductPrice = document.querySelector('input[name="price"]');
     let newProductInfo = document.querySelector('input[name="info"]');
     let newProductType = document.querySelector('#type-select');
     let newProductImg = document.querySelector('#imgproduct');
-    newProductImg = "./img/img-not-available.png" ;
-    if (newProductType.value) {
+    if (validateName(newProductName.value) && validateType(newProductType.value) 
+        && validatePrice(newProductPrice.value) && validateImg(newProductImg)
+        && validateInfo(newProductInfo.value)) {
+        newProductImg = "./img/img-not-available.png" ;
         let newProduct = {
             id: generateUniqueId().toString(),
             name: newProductName.value,
@@ -71,8 +131,6 @@ function handleAddProduct() {
         document.querySelector('.formated-price').innerHTML = formatPrice(0);
         renderProduct(productList);
         newProductName.focus();
-    } else {
-        alert("Chọn loại sản phẩm!");
     }
 }
 
