@@ -135,6 +135,10 @@ function handleAddProduct() {
         document.querySelector('.formated-price').innerHTML = formatPrice(0);
         renderProduct(productList);
         newProductName.focus();
+        document.querySelector('.addproduct__success').classList.add('show');
+        setTimeout(() => {
+            document.querySelector('.addproduct__success').classList.remove('show');
+        }, 3000)
     }
 }
 

@@ -361,6 +361,17 @@ body {
   padding: 8px 0; 
 }
 
+.addproduct__success {
+  text-align: center;
+  color: rgb(45, 182, 79);
+  padding: 8px 0;
+  display: none;
+}
+
+.addproduct__success.show {
+  display: block;
+}
+
 .admin__product .product__list .product__item {
   display: flex;
   align-items: center;
