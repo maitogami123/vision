@@ -2,6 +2,10 @@ window.onload = () => {
     renderProduct(getProduct());
 }
 
+const displayErrorMsg = (msg, selectElement) => {
+    document.querySelector(selectElement).innerHTML = msg
+ }
+
 // ========================================== Products =======================================
 
 function renderProduct(products) {
