@@ -81,7 +81,6 @@ const validateType = (typeToValidate) => {
 }
 
 const validateImg = (imgToValidate) => {
-    console.log(imgToValidate.files[0])
     if (imgToValidate.files.length <= 0) {
         displayErrorMsg('Vui lòng chọn ảnh sản phẩm', '.addproduct__error')
         return false;
